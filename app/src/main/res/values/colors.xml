@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2967a6</color>
+    <color name="colorPrimaryDark">#28609c</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="White">#FFFFFF</color>
+    <color name="ColorShade">#d7dcdc</color>
+    <color name="ColorPrimary">#22bdff</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="black">#161616</color>
+    <!--  Text colour     -->
+    <color name="colortext">#eeeeee</color>
+    <!--  button colour     -->
+
+    <color name="color_button">#236fa6</color>
+    <color name="color_cartimg_back">#eeeeee</color>
+
+</resources>

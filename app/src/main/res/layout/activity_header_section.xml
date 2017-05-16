@@ -1,0 +1,404 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!-- vertical ScrollView to make all the items or views scrollable -->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <!-- LinearLayout Inside ScrollView -->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/patientimage"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="18dp"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/abc"
+                android:gravity="right|center_vertical"
+                android:padding="10px"/>
+
+            <LinearLayout
+                android:id="@+id/inifitalLayout"
+                android:layout_marginTop="2dp"
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/textItem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Party Code"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/partycode"
+                    android:text="000297"
+                    android:maxLength="50"
+                    android:hint="party code"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/firstLayout"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/nameItem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Party Name"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/name"
+                    android:maxLength="50"
+                    android:hint="party name"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/secondLayout"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/AddressItem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Party Address"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/address"
+                    android:maxLength="50"
+                    android:hint="party address"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:minLines="5"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/thirdLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/membername"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Member Name"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/age"
+                    android:maxLength="50"
+                    android:hint="member name"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/fourthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp">
+
+                <TextView android:id="@+id/membermobileno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Member Mobile No"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:id="@+id/gender"
+                    android:maxLength="50"
+                    android:hint="member mobile no"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/fifthLayout"
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/siteaddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Site Address"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/mobileno"
+                    android:maxLength="50"
+                    android:hint="site address"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:minLines="5"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/sixthLayout"
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/partymobileno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Party Mobile No"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:id="@+id/disease"
+                    android:maxLength="50"
+                    android:hint="party mobile no"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/lastLayout"
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView android:id="@+id/Marketercode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marketer Code"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_design"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/bloodgroup"
+                    android:maxLength="50"
+                    android:text="000598"
+                    android:hint="marketer code"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="45dip"
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/selectitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/ColorPrimary"
+                    android:tag="facebook_login_button"
+                    android:textColor="@color/textColorPrimary"
+                    android:text="@string/gotonextstep" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

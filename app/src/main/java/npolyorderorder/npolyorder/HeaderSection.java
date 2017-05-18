@@ -13,7 +13,7 @@ public class HeaderSection extends AppCompatActivity {
         setContentView(R.layout.activity_header_section);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Header Section </font>"));
+        toolbar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Header Level </font>"));
         setSupportActionBar(toolbar);
     }
 }

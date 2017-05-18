@@ -34,7 +34,7 @@ public class BodySection extends AppCompatActivity {
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Body Section </font>"));
+        toolbar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Line Level </font>"));
         setSupportActionBar(toolbar);
 
         btnSimpleSnackbar.setOnClickListener(new View.OnClickListener() {

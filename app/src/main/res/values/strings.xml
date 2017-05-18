@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">NavigationDrawer</string>
+    <string name="app_name">NPolyOrder Sheet</string>
     <string name="action_settings">Settings</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="gotonextstep">Go to next step</string>
+    <string name="saveintodb">Save into database</string>
 </resources>

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private Intent intent;
+    private Button hl,ll,bl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,34 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initNavigationDrawer();
+
+        hl = (Button) findViewById(R.id.button1);
+        ll = (Button) findViewById(R.id.button2);
+        bl = (Button) findViewById(R.id.button3);
+
+        hl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this,HeaderSection.class);
+                startActivity(intent);
+            }
+        });
+
+        ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this,BodySection.class);
+                startActivity(intent);
+            }
+        });
+
+        bl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this,LowerLevelActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void initNavigationDrawer() {
@@ -51,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
                         //Toast.makeText(getApplicationContext(),"Settings",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.trash:
-                        Toast.makeText(getApplicationContext(),"Trash", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(MainActivity.this,LowerLevelActivity.class);
+                        startActivity(intent);
                         drawerLayout.closeDrawers();
                         break;
                 }
